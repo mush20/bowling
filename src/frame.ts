@@ -9,7 +9,7 @@ export class Frame {
 
   get isComplete(): boolean {
     if (this.isLast) {
-      return this.rolls.length == 3;
+      return this.rolls.length == (this.isStrike || this.isSpare ? 3 : 2);
     }
 
     return this.isStrike || this.rolls.length == 2;
