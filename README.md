@@ -1,16 +1,16 @@
-###Bowling score system
+### Bowling score system
 
-###Install Dependencies
+### Install Dependencies
 ```
 yarn install 
 ```
 
-###Test application
+### Test application
 ```
 yarn ci 
 ```
 
-####Game API
+#### Game API
 start a new game:
 ```
 const bowlingGame = new BowlingGame();
