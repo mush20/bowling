@@ -26,7 +26,7 @@ Calculate score:
 bowlingGame.score();
 ```
 
-The features on the system are:
+### The features on the system are:
 
 * One player only
 * In each frame, the bowler has 2 tries to knock down all the pins
@@ -47,3 +47,7 @@ Their score is 20. So that's (4 + 6 + 5) + (5 + 0)
 E.g, if a bowler rolls, 10 | 5, 4
 
 Their score is 28. So that's (10 + 5 + 4) + ( 5 + 4)
+
+### Next Steps
+- prevent game to go over 10 frames
+- add more players
