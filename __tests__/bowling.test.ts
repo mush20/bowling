@@ -39,6 +39,8 @@ describe("Bowling score system", () => {
     bowlingGame.roll(10);
     bowlingGame.roll(10);
     bowlingGame.roll(10);
+    bowlingGame.roll(10);
+    bowlingGame.roll(10);
     expect(bowlingGame.score()).toEqual(300);
   });
 });
