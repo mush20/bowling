@@ -31,6 +31,11 @@ export class BowlingGame {
   }
 
   roll(noOfPin: number): void {
+
+    if(this.frames.length > 10) {
+      return;
+    }
+
     if (this.currentFrame.isComplete) {
       this.frames.push(new Frame(this.frames.length === 9));
     }

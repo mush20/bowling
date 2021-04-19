@@ -49,5 +49,4 @@ E.g, if a bowler rolls, 10 | 5, 4
 Their score is 28. So that's (10 + 5 + 4) + ( 5 + 4)
 
 ### Next Steps
-- prevent game to go over 10 frames
 - add more players
