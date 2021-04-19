@@ -1,33 +1,44 @@
 export class Frame {
 
+  isLast = false;
+  rolls: number[] = [];
+
   constructor(isLast = false) {
+    this.isLast = isLast;
   }
 
   get isComplete(): boolean {
-    return false;
+    if (this.isLast) {
+      return this.rolls.length == 3;
+    }
+
+    return this.isStrike || this.rolls.length == 2;
   }
 
   get isSpare(): boolean {
-    return false;
+    return this.rolls[0] + this.rolls[1] === 10;
   }
 
   get isStrike(): boolean {
-    return false;
+    return this.rolls[0] === 10;
   }
 
   get bonusSpare(): number {
-    return 0;
+    return this.rolls[0];
   }
 
   get bonusStrike(): number {
-    return 0;
+    return (this.rolls[0] ?? 0) + (this.rolls[1] ?? 0)
   }
 
   get total(): number {
-    return 0;
+    return this.rolls.reduce((p, c) => {
+      const sum = p + c;
+      return sum;
+    }, 0);
   }
 
   roll(noOfPins: number): void {
-
+    this.rolls.push(noOfPins);
   }
 }
