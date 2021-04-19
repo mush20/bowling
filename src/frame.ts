@@ -1,7 +1,10 @@
+/**
+ * Bowling Game Frame
+ */
 export class Frame {
 
-  isLast = false;
-  rolls: number[] = [];
+  private readonly isLast: boolean;
+  private rolls: number[] = [];
 
   constructor(isLast = false) {
     this.isLast = isLast;
@@ -33,8 +36,7 @@ export class Frame {
 
   get total(): number {
     return this.rolls.reduce((p, c) => {
-      const sum = p + c;
-      return sum;
+      return p + c;
     }, 0);
   }
 

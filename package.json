@@ -6,7 +6,8 @@
   "description": "Bowling Game Score",
   "scripts": {
     "lint": "eslint . --ext .js,.ts --fix",
-    "test": "jest"
+    "test": "jest",
+    "ci": "yarn lint && yarn test"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
